@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title></title>
+    <style>
+      body {
+        color: #a8a8a8;
+        background-color: #434343;
+        text-align: center;
+      }
+      .version {
+        font-size: 15px;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+        background-color: #a7a7a7;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Swerve's Math <span class="version">beta v1.0</span></h1>
+    <h4 id="splash"></h4>
+    <a href="">Games</a>
+    <a href="proxy.html">Proxy</a>
+    <a>Credit</a>
+    <script>
+      const messages = [
+        "a dedicated game and proxy website",
+        "call me a waffle the way i run circles around these squares",
+        `"use critical thinking!" - mrs fezatt`,
+        `"dont go through my search history, it has femboys" - said everyone ever`,
+        `"im sippin promethazine"`,
+        `yk its a good day when you see mr simer instead of mrs leek`,
+        `i promise this website will be better than the other ones`,
+        `Swerve's Math, one of my websites that for the first time will probably have a working proxy`,
+        `"im like hey whats up hello"`,
+        `refresh for a new message`,
+        `schools after you bypass an admin extension with an exploit on their s****y chromebooks: 😤`,
+        `also check out blocksiX`,
+      ];
+
+      function roulettemessages() {
+        const rand = Math.floor(Math.random() * messages.length);
+        return messages[rand];
+      }
+      document.getElementById("splash").innerText = roulettemessages();
+    </script>
+  </body>
+</html>
