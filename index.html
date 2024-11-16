@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link id="favicon" rel="icon" href="classroomfavicon.png" type="image/x-icon">
+    <script src="u/uv.bundle.js" defer></script>
+    <script src="u/uv.config.js" defer></script>
+    <script src="register-sw.js" defer></script>
+    <script src="search.js" defer></script>
+    <script src="index.js" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+        body {
+            font-family: "Hubot Sans", sans-serif;
+            background-color: rgb(36, 37, 68);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column; /* i hate adjusting and stuff */
+        }
+        .header-container {
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+        }
+        h1 {
+            margin: 0 10px;
+            color:rgb(65, 136, 115)
+        }
+
+        .gold {
+            background: linear-gradient(180deg, #7a8115, rgb(241, 255, 46));
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            background-clip: text;
+            color: transparent;
+        }
+
+        input {
+            padding: 0px 17px;
+            border: none;
+            height: 50px;
+            outline: none;
+            width: 300px;
+            margin-top: 25px;
+            border-radius: 7px;
+            background-color: #3a717a;
+            color: black;
+        }
+
+        .cool {
+            color: rgb(65, 136, 115);
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <h1>Jahameh's History Proxy</h1>
+    </div>
+    <h3 id="splash" class="cool">so for some reason the splash isnt working thats why this is here</h3>
+    <form id="uv-form">
+        <input id="uv-address" type="text" />
+    </form>
+    <p id="uv-error"></p>
+    <pre id="uv-error-code"></pre>
+    <script>
+        const messages = [
+        `also check out blocksiX`,
+        `this is so frickin epic`,
+        `i hate my history teacher`,
+        `this is kinda cool`,
+        `a wise man once said "use JHW" (he didnt)`,
+      ];
+
+      function roulettemessages() {
+        const rand = Math.floor(Math.random() * messages.length);
+        return messages[rand];
+      }
+      document.getElementById("splash").innerText = roulettemessages();
+    </script>
+</body>
+</html>
